@@ -1,0 +1,167 @@
+/* Основні налаштування */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Хедер */
+header {
+  background-color: #ffeb3b;
+  padding: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #e65100;
+}
+
+/* Герой-секція */
+.hero {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fefefe;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: 15px auto;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Меню */
+.menu {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.menu h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.menu .item {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  align-items: center;
+}
+
+.menu .item h3 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.menu .item p {
+  color: #555;
+}
+
+/* Акції */
+.promotions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  background-color: #f7f7f7;
+  padding: 40px 20px;
+}
+
+.promotions h3 {
+  color: #d84315;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.promotions div {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.promotions div:hover {
+  transform: translateY(-5px);
+}
+
+/* Про нас */
+.about {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2rem;
+}
+
+/* Футер */
+footer {
+  background-color: #c4c4c4;
+  padding: 25px 20px;
+  font-size: 0.95rem;
+}
+
+.footer-info {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #222;
+  line-height: 1.4;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .menu .item {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .menu h2, .about h2 {
+    font-size: 1.6rem;
+  }
+}
